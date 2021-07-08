@@ -105,6 +105,7 @@ public class Password extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("USER TYPE");
 
+        txtutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "doctor ", "patient", "reception" }));
         txtutype.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtutypeActionPerformed(evt);
@@ -200,12 +201,17 @@ public class Password extends javax.swing.JFrame {
                  PreparedStatement preparedStatement = conn.prepareStatement(sql);
                  
                 String name = txtname.getText();
+                String username = txtusername .getText();
+                String password = txtpassword.getText();
+                String utype = txtutype.getSelectedItem().toString();
+                
+                
                   
                     preparedStatement.setInt(1, 0);
                     preparedStatement.setString(2,  name);
-                    preparedStatement.setString(3, "Rashmi98");
-                    preparedStatement.setString(4, "password");
-                    preparedStatement.setString(5, "admin");
+                    preparedStatement.setString(3, username);
+                    preparedStatement.setString(4, password);
+                    preparedStatement.setString(5, utype);
 
 
                     preparedStatement.executeUpdate();
