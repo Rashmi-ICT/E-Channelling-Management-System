@@ -5,11 +5,26 @@
  */
 package chanelling;
 
+
+import java.sql.SQLException;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Rashmi
  */
 public class Login extends javax.swing.JFrame {
+       
+    Connection conn = connection.connect();
+    private String sql;
 
     /**
      * Creates new form PasswordGenarater
@@ -36,9 +51,9 @@ public class Login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField2 = new javax.swing.JTextField();
+        txtusername = new javax.swing.JTextField();
+        txtutype = new javax.swing.JComboBox<>();
+        txtpassword = new javax.swing.JTextField();
 
         label1.setText("label1");
 
@@ -81,8 +96,13 @@ public class Login extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("LOGING");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        txtutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "doctor", "patient", "reception" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,9 +116,9 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(145, 145, 145)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, 0, 157, Short.MAX_VALUE))
+                    .addComponent(txtpassword)
+                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtutype, 0, 157, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,15 +137,15 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtutype, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -149,6 +169,70 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            // TODO add your handling code here:
+            
+                 String sql = "select * from user where username = ? and password = ? and utype =? ";
+        
+                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
+                
+                String username = txtusername .getText();
+                String password = txtpassword.getText();
+                String utype = txtutype.getSelectedItem().toString();
+                
+              
+                    preparedStatement.setString(1,  username);
+                    preparedStatement.setString(2, password);
+                    preparedStatement.setString(3, utype);
+
+
+
+                    ResultSet rs = preparedStatement.executeQuery();
+                
+                if(rs.next()){
+                    
+                    if(utype == "doctor"){
+                        Doctor doc = new Doctor();
+                        doc.setVisible(true);
+                        this.hide(); 
+                    }
+                        
+                    else if (utype == "patient"){
+                        PatienLogin pat =new PatienLogin();
+                        pat.setVisible(true);
+                        this.hide();
+                       
+                    }
+                    
+                    else if (utype == "reception"){
+                     Reseption rec =new Reseption();
+                        rec.setVisible(true);
+                        this.hide();
+                    
+                    
+                        
+                    }
+                    
+                    
+                        System.out.println("Loginning Sucess");
+                       
+                }else{
+                      System.out.println("Loginning fail");
+                }
+                    
+                  
+           
+  
+            
+            
+        } catch (SQLException ex) {
+           System.out.println(ex);
+        }
+        
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,7 +274,6 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -198,8 +281,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private java.awt.Label label1;
+    private javax.swing.JTextField txtpassword;
+    private javax.swing.JTextField txtusername;
+    private javax.swing.JComboBox<String> txtutype;
     // End of variables declaration//GEN-END:variables
+
+    private void elseif(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

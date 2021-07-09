@@ -100,9 +100,9 @@
                   </Group>
                   <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jTextField2" max="32767" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="154" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="0" pref="157" max="32767" attributes="0"/>
+                      <Component id="txtpassword" max="32767" attributes="0"/>
+                      <Component id="txtusername" min="-2" pref="154" max="-2" attributes="0"/>
+                      <Component id="txtutype" alignment="0" pref="157" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
@@ -128,17 +128,17 @@
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="txtusername" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="txtpassword" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jComboBox1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="txtutype" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="45" max="32767" attributes="0"/>
@@ -188,17 +188,19 @@
             </Property>
             <Property name="text" type="java.lang.String" value="LOGING"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtusername">
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="txtutype">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="3">
+                <StringItem index="0" value="doctor"/>
+                <StringItem index="1" value="patient"/>
+                <StringItem index="2" value="reception"/>
               </StringArray>
             </Property>
           </Properties>
@@ -206,7 +208,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtpassword">
         </Component>
       </SubComponents>
     </Container>
