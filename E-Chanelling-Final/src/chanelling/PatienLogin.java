@@ -212,6 +212,8 @@ public class PatienLogin extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        DoctorDetails dd = new DoctorDetails();
+        dd.setVisible(true);
         
         
     }//GEN-LAST:event_jButton6ActionPerformed
