@@ -214,6 +214,7 @@ public class Doctor extends javax.swing.JFrame {
         
         DocDetails doc = new DocDetails();
         doc.setVisible(true); 
+        this.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -221,6 +222,7 @@ public class Doctor extends javax.swing.JFrame {
         
         veiwdetails chanel = new veiwdetails();
         chanel.setVisible(true); 
+        this.hide();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -228,6 +230,7 @@ public class Doctor extends javax.swing.JFrame {
         
         homePage home = new homePage();
         home.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
