@@ -5,11 +5,28 @@
  */
 package chanelling;
 
+
+
+import java.sql.SQLException;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
+
+import chanelling.connection;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Rashmi
  */
 public class Patientdetailsveiw extends javax.swing.JFrame {
+    
+        
+    Connection conn = connection.connect();
 
     /**
      * Creates new form Patientdetailsveiw
@@ -17,7 +34,35 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
     public Patientdetailsveiw() {
         initComponents();
     }
-
+    
+    public final void patiGridView(){
+        
+        try{
+            
+       
+            PreparedStatement ps = conn.prepareStatement("Select * from patient");
+            ResultSet rs=ps.executeQuery();
+            DefaultTableModel tm = (DefaultTableModel)jTable1.getModel();
+            tm.setRowCount(0);
+            
+            while(rs.next()){
+                
+                Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("address"),rs.getString("gender"),
+                    rs.getString("tp"),rs.getString("pathologie"),rs.getString("blood"),rs.getString("email"),rs.getString("gender")};
+                tm.addRow(o);
+                
+                
+                
+            }
+            
+            
+        }
+        catch(SQLException e){
+            
+            JOptionPane.showMessageDialog(null,"Error in Attendance Grid View..... "+e);
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,6 +80,11 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -49,7 +99,7 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(248, 248, 248)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,9 +124,14 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "PATIENT ID", "P NAME", "ADDRESS", "TP", "GENDER", "PATHOLOGISE", "BLOOD TYPE", "AGE"
+                "PATIENT ID", "P NAME", "ADDRESS", "TP", "GENDER", "PATHOLOGISE", "BLOOD TYPE", "EMAIL"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -92,16 +147,18 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(316, 316, 316)
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(394, 394, 394)
+                        .addGap(393, 393, 393)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,11 +166,11 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(143, 143, 143))
+                .addGap(137, 137, 137))
         );
 
         pack();
@@ -121,7 +178,26 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        PatienLogin pl  = new PatienLogin();
+        pl.setVisible(true); 
+        this.hide();
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+   
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        
+             patiGridView();
+        
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -167,4 +243,6 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+
 }
