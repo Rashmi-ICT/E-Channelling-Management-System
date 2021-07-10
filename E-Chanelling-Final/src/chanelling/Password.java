@@ -194,6 +194,10 @@ public class Password extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        homePage  pp =new homePage();
+        pp.setVisible(true); 
+          this.hide();
+        
         
         try{
             String sql = "INSERT INTO user VALUES (?,?,?,?,?)";
