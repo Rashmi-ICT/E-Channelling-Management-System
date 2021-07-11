@@ -39,9 +39,12 @@
               <Component id="jLabel3" min="-2" pref="389" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
           </Group>
-          <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" max="32767" attributes="0"/>
+          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="368" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" pref="85" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -51,13 +54,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="234" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="155" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="109" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="128" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -122,20 +125,32 @@
         <Component class="javax.swing.JTable" name="jTable1">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="9" rowCount="8">
-                <Column editable="true" title="DOC ID" type="java.lang.Object"/>
-                <Column editable="true" title="DOC NAME" type="java.lang.Object"/>
+              <Table columnCount="11" rowCount="8">
                 <Column editable="true" title="PATIENT ID" type="java.lang.Object"/>
                 <Column editable="true" title="PATIENT NAME" type="java.lang.Object"/>
+                <Column editable="true" title="ADDRESS" type="java.lang.Object"/>
                 <Column editable="true" title="TP" type="java.lang.Object"/>
-                <Column editable="true" title="ADRESS" type="java.lang.Object"/>
+                <Column editable="true" title="PATHOLOGIE" type="java.lang.Object"/>
+                <Column editable="true" title="DOC ID" type="java.lang.Object"/>
+                <Column editable="true" title="DOC NAME" type="java.lang.Object"/>
+                <Column editable="true" title="DOC CHARGES" type="java.lang.Object"/>
+                <Column editable="true" title="HOSPITLE CHARGE" type="java.lang.Object"/>
                 <Column editable="true" title="ROOM" type="java.lang.Object"/>
                 <Column editable="true" title="DATE" type="java.lang.Object"/>
-                <Column editable="true" title="PATHOLOGISE" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>

@@ -32,19 +32,19 @@ public class veiwdetails extends javax.swing.JFrame {
         initComponents();
     }
     
-     public final void chanelView(){
+     public final void chanel(){
         
         try{
             
        
-            PreparedStatement ps = conn.prepareStatement(" Select  id, name, room  from patient where id = ?");
+            PreparedStatement ps = conn.prepareStatement(" Select  *  from  chanel");
             ResultSet rs=ps.executeQuery();
             DefaultTableModel tm = (DefaultTableModel)jTable1.getModel();
             tm.setRowCount(0);
             
             while(rs.next()){
                 
-                Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("room")};
+                Object o[] = {rs.getString("pid"),rs.getString("pname"),rs.getString("address"),rs.getString("tp"),rs.getString("pathologie"),rs.getString("Did"),rs.getString("Dname"),rs.getString("doccharge"),rs.getString("hoscharge"),rs.getString("room"),rs.getString("date")};
                 tm.addRow(o);
                 
                 
@@ -115,17 +115,17 @@ public class veiwdetails extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "DOC ID", "DOC NAME", "PATIENT ID", "PATIENT NAME", "TP", "ADRESS", "ROOM", "DATE", "PATHOLOGISE"
+                "PATIENT ID", "PATIENT NAME", "ADDRESS", "TP", "PATHOLOGIE", "DOC ID", "DOC NAME", "DOC CHARGES", "HOSPITLE CHARGE", "ROOM", "DATE"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -147,9 +147,11 @@ public class veiwdetails extends javax.swing.JFrame {
                 .addContainerGap(251, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(226, 226, 226))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1))
             .addGroup(layout.createSequentialGroup()
-                .addGap(362, 362, 362)
+                .addGap(368, 368, 368)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -157,13 +159,13 @@ public class veiwdetails extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel3)
-                .addGap(53, 53, 53)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(49, 49, 49)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
                 .addComponent(jButton1)
-                .addGap(0, 109, Short.MAX_VALUE))
+                .addGap(0, 128, Short.MAX_VALUE))
         );
 
         pack();
@@ -172,13 +174,15 @@ public class veiwdetails extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         
-        chanelView();
+        chanel();
         
 
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        
         
         
         
