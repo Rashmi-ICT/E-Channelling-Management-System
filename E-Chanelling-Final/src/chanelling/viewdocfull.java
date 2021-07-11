@@ -42,7 +42,7 @@ public class viewdocfull extends javax.swing.JFrame {
        
             PreparedStatement ps = conn.prepareStatement("Select * from doctor");
             ResultSet rs=ps.executeQuery();
-            DefaultTableModel tm = (DefaultTableModel)jTable1.getModel();
+            DefaultTableModel tm = (DefaultTableModel)jTable3.getModel();
             tm.setRowCount(0);
             
             while(rs.next()){
@@ -57,7 +57,7 @@ public class viewdocfull extends javax.swing.JFrame {
             
             
         }
-        catch(Exception e){
+        catch(SQLException e){
             
             JOptionPane.showMessageDialog(null,"Error in Attendance Grid View..... "+e);
         }
@@ -151,6 +151,11 @@ public class viewdocfull extends javax.swing.JFrame {
                 "DOC ID", "NAME", "ADDRESS", "TP", "EMAIL", "ROOM", "SPECIALOST", "CHARGES", "GENDER", "DATE"
             }
         ));
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable3MouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -160,19 +165,19 @@ public class viewdocfull extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(361, 361, 361)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(265, 265, 265))
+                .addContainerGap(478, Short.MAX_VALUE))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(261, 261, 261))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel3)
                 .addGap(52, 52, 52)
+                .addComponent(jLabel3)
+                .addGap(54, 54, 54)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,8 +213,14 @@ public class viewdocfull extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
       DocView();
+      
         
     }//GEN-LAST:event_formWindowOpened
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        // TODO add your handling code here:
+            DocView();
+    }//GEN-LAST:event_jTable3MouseClicked
     
     
     
