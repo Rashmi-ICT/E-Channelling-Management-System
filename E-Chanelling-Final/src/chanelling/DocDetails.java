@@ -32,6 +32,7 @@ public class DocDetails extends javax.swing.JFrame {
      */
     public DocDetails() {
         initComponents();
+          setLocationRelativeTo(null);
     }
     
     public final void DocGridView(){
@@ -531,16 +532,16 @@ public class DocDetails extends javax.swing.JFrame {
                 
                 
                   
-                    
-                    preparedStatement.setString(1,  name);
-                    preparedStatement.setString(2, address);
-                    preparedStatement.setString(3, tp);
-                    preparedStatement.setString(4,email);
-                    preparedStatement.setString(5, room);
-                    preparedStatement.setString(6, specialist);
-                    preparedStatement.setString(7,charge);
-                    preparedStatement.setString(8,gender);
-                    preparedStatement.setInt(9, id);
+                    preparedStatement.setInt(1, id);
+                    preparedStatement.setString(2,  name);
+                    preparedStatement.setString(3, address);
+                    preparedStatement.setString(4, tp);
+                    preparedStatement.setString(5,email);
+                    preparedStatement.setString(6, room);
+                    preparedStatement.setString(7, specialist);
+                    preparedStatement.setString(8,charge);
+                    preparedStatement.setString(9,gender);
+                   
                     
                     
 

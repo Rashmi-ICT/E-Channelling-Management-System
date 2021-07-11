@@ -16,6 +16,7 @@ public class Doctor extends javax.swing.JFrame {
      */
     public Doctor() {
         initComponents();
+          setLocationRelativeTo(null);
     }
 
     /**

@@ -33,6 +33,7 @@ public class Patientdetailsveiw extends javax.swing.JFrame {
      */
     public Patientdetailsveiw() {
         initComponents();
+          setLocationRelativeTo(null);
     }
     
     public final void patiGridView(){

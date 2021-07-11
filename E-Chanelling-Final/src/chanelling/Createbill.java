@@ -16,6 +16,7 @@ public class Createbill extends javax.swing.JFrame {
      */
     public Createbill() {
         initComponents();
+          setLocationRelativeTo(null);
     }
 
     /**

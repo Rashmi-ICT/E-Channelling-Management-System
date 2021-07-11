@@ -16,6 +16,7 @@ public class PatienLogin extends javax.swing.JFrame {
      */
     public PatienLogin() {
         initComponents();
+          setLocationRelativeTo(null);
     }
 
     /**
@@ -193,6 +194,9 @@ public class PatienLogin extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        homePage hp = new homePage();
+        hp.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -200,12 +204,14 @@ public class PatienLogin extends javax.swing.JFrame {
         
         Patientdetails pt = new Patientdetails();
         pt.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          bill bb = new  bill();
          bb.setVisible(true);
+         this.hide();
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -214,6 +220,7 @@ public class PatienLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         Viewdoc dd = new Viewdoc();
         dd.setVisible(true);
+        this.hide();
         
         
     }//GEN-LAST:event_jButton6ActionPerformed

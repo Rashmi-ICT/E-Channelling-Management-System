@@ -33,6 +33,7 @@ public class Patientdetails extends javax.swing.JFrame {
      */
     public Patientdetails() {
         initComponents();
+          setLocationRelativeTo(null);
     }
 
     /**

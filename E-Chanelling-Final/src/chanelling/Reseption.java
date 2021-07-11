@@ -10,12 +10,19 @@ package chanelling;
  * @author Rashmi
  */
 public class Reseption extends javax.swing.JFrame {
+    
+   
+    
+    
 
     /**
      * Creates new form Reseption
      */
     public Reseption() {
         initComponents();
+        
+        
+         setLocationRelativeTo(null);
     }
 
     /**
@@ -41,7 +48,6 @@ public class Reseption extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -162,14 +168,6 @@ public class Reseption extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("RECEPTION DETAILS");
 
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton7.setText("CREATE BILL");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton8.setText("CREATE CHANEL");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +184,6 @@ public class Reseption extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,9 +227,7 @@ public class Reseption extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(60, Short.MAX_VALUE))))
+                        .addContainerGap(117, Short.MAX_VALUE))))
         );
 
         pack();
@@ -244,21 +239,20 @@ public class Reseption extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         Patientdetailsveiw pd = new Patientdetailsveiw();
         pd.setVisible(true);
+        this.hide();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
         
-        Createbill  cb = new Createbill ();
-        cb.setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
+       homePage hh =new homePage();
+        hh.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -270,8 +264,9 @@ public class Reseption extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        Viewdoc  vd = new Viewdoc();
+        viewdocfull vd = new viewdocfull();
         vd.setVisible(true);
+        this.hide();
         
         
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -281,10 +276,15 @@ public class Reseption extends javax.swing.JFrame {
         
         Patientdetails pd = new Patientdetails();
         pd.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        
+        Chanel cc = new Chanel();
+        cc.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
@@ -330,7 +330,6 @@ public class Reseption extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;

@@ -31,6 +31,7 @@ public class Password extends javax.swing.JFrame {
      */
     public Password() {
         initComponents();
+          setLocationRelativeTo(null);
     }
     
     

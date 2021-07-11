@@ -16,6 +16,7 @@ public class homePage extends javax.swing.JFrame {
      */
     public homePage() {
         initComponents();
+          setLocationRelativeTo(null);
     }
 
     /**
@@ -132,6 +133,7 @@ public class homePage extends javax.swing.JFrame {
         
         Login log  = new Login();
         log.setVisible(true); 
+        this.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -140,6 +142,7 @@ public class homePage extends javax.swing.JFrame {
         
         Password pas  = new Password();
         pas.setVisible(true); 
+        this.hide();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

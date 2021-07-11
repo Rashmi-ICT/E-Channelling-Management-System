@@ -31,6 +31,7 @@ public class viewdocfull extends javax.swing.JFrame {
      */
     public viewdocfull() {
         initComponents();
+          setLocationRelativeTo(null);
     }
     
     

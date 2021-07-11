@@ -30,6 +30,7 @@ public class Viewdoc extends javax.swing.JFrame {
      */
     public Viewdoc() {
         initComponents();
+          setLocationRelativeTo(null);
     }
     
       
