@@ -181,7 +181,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
+       try {
             // TODO add your handling code here:
             
                  String sql = "select * from user where username = ? and password = ? and utype =? ";
@@ -292,9 +292,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private java.awt.Label label1;
-    private javax.swing.JTextField txtpassword;
-    private javax.swing.JTextField txtusername;
-    private javax.swing.JComboBox<String> txtutype;
+    protected static javax.swing.JTextField txtpassword;
+    protected static javax.swing.JTextField txtusername;
+    protected static javax.swing.JComboBox<String> txtutype;
     // End of variables declaration//GEN-END:variables
 
     private void elseif(boolean b) {
