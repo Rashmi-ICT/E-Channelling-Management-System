@@ -13,7 +13,7 @@ public class PatienLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form PatienLogin
-     */
+     *///  add button
     public PatienLogin() {
         initComponents();
           setLocationRelativeTo(null);
