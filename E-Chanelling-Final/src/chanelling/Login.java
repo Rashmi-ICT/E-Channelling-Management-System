@@ -17,6 +17,7 @@ import java.sql.ResultSet;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Rashmi
@@ -225,10 +226,11 @@ public class Login extends javax.swing.JFrame {
                         
                     }
                     
-                    
+                    JOptionPane.showMessageDialog(null,"succuss login") ;
                         System.out.println("Loginning Sucess");
                        
                 }else{
+                    JOptionPane.showMessageDialog(null,"laogin fail and try again") ;
                       System.out.println("Loginning fail");
                 }
                     
