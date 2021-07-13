@@ -16,6 +16,7 @@ import java.sql.PreparedStatement;
 
 
 import chanelling.connection;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -248,6 +249,9 @@ public class Password extends javax.swing.JFrame {
         homePage  pp =new homePage();
         pp.setVisible(true); 
           this.hide();
+          
+          
+       
         
         
         try{
@@ -269,11 +273,11 @@ public class Password extends javax.swing.JFrame {
 
 
                     preparedStatement.executeUpdate();
-                    
+                    JOptionPane.showMessageDialog(null,"password generated") ;
                     System.out.println("Data Inserted");
                     
         }catch(SQLException e){
-            System.out.println(e);
+            JOptionPane.showMessageDialog(null,"ERROR"+e) ;
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
