@@ -316,7 +316,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="99" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="0115495423"/>
+            <Property name="text" type="java.lang.String" value="1245"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
@@ -338,7 +338,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="99" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="LESSON@GMAIL.COM"/>
+            <Property name="text" type="java.lang.String" value="lesson@gmail.com"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel16">

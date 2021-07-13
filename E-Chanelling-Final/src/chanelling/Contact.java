@@ -120,7 +120,7 @@ public class Contact extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 153, 0));
-        jLabel13.setText("0115495423");
+        jLabel13.setText("1245");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 153, 0));
@@ -128,7 +128,7 @@ public class Contact extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 153, 0));
-        jLabel15.setText("LESSON@GMAIL.COM");
+        jLabel15.setText("lesson@gmail.com");
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 153, 0));
