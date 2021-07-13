@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 
 
 import chanelling.connection;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -328,7 +329,7 @@ public class Patientdetails extends javax.swing.JFrame {
                     preparedStatement.executeUpdate();
                     
                  
-                    
+                    JOptionPane.showMessageDialog(null,"data inserted") ;
                     System.out.println("Data Inserted");
                     
         }catch(SQLException e){
