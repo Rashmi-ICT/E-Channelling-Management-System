@@ -469,7 +469,7 @@ public class DocDetails extends javax.swing.JFrame {
                     preparedStatement.executeUpdate();
                     
                  
-                    
+                    JOptionPane.showMessageDialog(null,"data deleted") ;
                     System.out.println("Data deleted");
                     DocGridView();
                     
@@ -526,7 +526,7 @@ public class DocDetails extends javax.swing.JFrame {
                     preparedStatement.executeUpdate();
                     
                  
-                    
+                    JOptionPane.showMessageDialog(null,"data inserted") ;
                     System.out.println("Data Inserted");
                     DocGridView();
                     
@@ -600,7 +600,7 @@ public class DocDetails extends javax.swing.JFrame {
                     preparedStatement.executeUpdate();
                     
                  
-                    
+                    JOptionPane.showMessageDialog(null,"data updated") ;
                     System.out.println("Data Updated");
                     DocGridView();
                     
