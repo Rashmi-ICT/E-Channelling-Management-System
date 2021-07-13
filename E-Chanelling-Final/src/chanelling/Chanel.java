@@ -381,7 +381,7 @@ public class Chanel extends javax.swing.JFrame {
                     preparedStatement.executeUpdate();
                     
                  
-                    
+                    JOptionPane.showMessageDialog(null,"created chanel") ;
                     System.out.println("Data Inserted");
                    
                     
