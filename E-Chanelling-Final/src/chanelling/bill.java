@@ -325,9 +325,6 @@ public class bill extends javax.swing.JFrame {
                   String tot = Float.toString(Total);
                   lblBill.setText( tot);
 
-                
-                
-                
             }
             
             
@@ -342,22 +339,22 @@ public class bill extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_cmbPatientIdActionPerformed
-
+  
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         
 
         try{
-        Statement st = conn.createStatement();
+       Statement st = conn.createStatement();
 
          ResultSet r=st.executeQuery("select * from chanel ");
 
          while (r.next()) {  
 
              cmbPatientId.addItem(r.getString("id"));  
-         }
+      }
          
-        }
+       }
         catch(Exception e){
             
             JOptionPane.showMessageDialog(null,"Error in Attendance Grid View..... "+e);
@@ -365,7 +362,7 @@ public class bill extends javax.swing.JFrame {
         
  
     }//GEN-LAST:event_formWindowOpened
-
+  
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         PatienLogin pl = new   PatienLogin();
