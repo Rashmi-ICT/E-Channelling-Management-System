@@ -113,7 +113,7 @@ public class Password extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("PASSWORD");
 
-        txtutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "doctor ", "patient", "reception" }));
+        txtutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "doctor ", "patient", "reception", "pharmacis" }));
         txtutype.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtutypeActionPerformed(evt);
