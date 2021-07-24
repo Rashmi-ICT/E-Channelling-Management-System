@@ -474,8 +474,11 @@ public class Medi extends javax.swing.JFrame {
         this.hide();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    
+    
     private void cmbNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbNameActionPerformed
         String item_name = cmbName.getSelectedItem().toString();
+        
         try{
             PreparedStatement ps = conn.prepareStatement("Select  *   from items where itemName = ?");
             ps.setString(1,  item_name);
