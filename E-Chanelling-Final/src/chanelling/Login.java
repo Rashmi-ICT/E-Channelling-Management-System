@@ -18,18 +18,14 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-/**
- *
- * @author Rashmi
- */
+
+
 public class Login extends javax.swing.JFrame {
        
     Connection conn = connection.connect();
     private String sql;
 
-    /**
-     * Creates new form PasswordGenarater
-     */
+    
     public Login() {
         initComponents();
           setLocationRelativeTo(null);
@@ -67,10 +63,10 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +178,7 @@ public class Login extends javax.swing.JFrame {
          boolean result = false;
          
         try {
-            // TODO add your handling code here:
+    
             
                 String username = txtusername .getText();
                 String password = txtpassword.getText();
@@ -196,7 +192,7 @@ public class Login extends javax.swing.JFrame {
             
             
             
-              
+              // checke value
                 
                 if(result == true){
                     
