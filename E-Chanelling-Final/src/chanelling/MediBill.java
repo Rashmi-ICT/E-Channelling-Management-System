@@ -12,13 +12,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Rashmi
- */
+
 public class MediBill extends javax.swing.JFrame {
 
     Connection conn = connection.connect();
+    
+    
     /**
      * Creates new form MediBill
      */
