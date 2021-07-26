@@ -137,7 +137,7 @@ public class AboutUs extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-       homePage pas  = new homePage();
+       homePage1 pas  = new homePage1();
         pas.setVisible(true); 
         this.hide();
         
