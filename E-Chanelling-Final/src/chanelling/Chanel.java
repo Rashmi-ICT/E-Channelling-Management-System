@@ -72,6 +72,8 @@ public class Chanel extends javax.swing.JFrame {
         txtRoom = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        txtZOOM = new javax.swing.JTextField();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("PATIENT ID");
@@ -214,6 +216,16 @@ public class Chanel extends javax.swing.JFrame {
             }
         });
 
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("ZOOM LINK");
+
+        txtZOOM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtZOOMActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -236,10 +248,11 @@ public class Chanel extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel11)
-                        .addComponent(jLabel15)))
+                        .addComponent(jLabel15)
+                        .addComponent(jLabel16)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cmbDid, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbPid1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -252,10 +265,12 @@ public class Chanel extends javax.swing.JFrame {
                             .addComponent(txtHc, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(78, 78, 78))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton5)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(175, 175, 175))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtZOOM, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,11 +323,15 @@ public class Chanel extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtZOOM, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton5))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(33, 33, 33))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -337,7 +356,7 @@ public class Chanel extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
          try{
-            String sql = "INSERT INTO chanel VALUES (?,?,?,?,?,?,?,?,?,?,?,now())"; // input data
+            String sql = "INSERT INTO chanel VALUES (?,?,?,?,?,?,?,?,?,?,?,now(),?)"; // input data
         
                 PreparedStatement preparedStatement = conn.prepareStatement(sql); // database connect
                 
@@ -352,6 +371,7 @@ public class Chanel extends javax.swing.JFrame {
                 String dcharge =txtCh.getText();
                 String hcharge = txtHc.getText();
                 String room = txtRoom.getText();
+                String zoom = txtZOOM.getText();
                 
                 
                
@@ -368,6 +388,7 @@ public class Chanel extends javax.swing.JFrame {
                     preparedStatement.setString(9,dcharge);
                     preparedStatement.setString(10, hcharge);
                     preparedStatement.setString(11, room);
+                    preparedStatement.setString(12, zoom);
                
                     
 
@@ -452,6 +473,7 @@ public class Chanel extends javax.swing.JFrame {
              txtDname.setText(r.getString("name"));
              txtRoom.setText(r.getString("room"));
              txtCh.setText(r.getString("charges"));
+             txtZOOM.setText(r.getString("zoomLink"));
              
          }
          
@@ -518,6 +540,10 @@ public class Chanel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void txtZOOMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZOOMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtZOOMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -567,6 +593,7 @@ public class Chanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -588,5 +615,6 @@ public class Chanel extends javax.swing.JFrame {
     private javax.swing.JTextField txtRoom;
     private javax.swing.JTextField txtRoom1;
     private javax.swing.JTextField txtTp;
+    private javax.swing.JTextField txtZOOM;
     // End of variables declaration//GEN-END:variables
 }
