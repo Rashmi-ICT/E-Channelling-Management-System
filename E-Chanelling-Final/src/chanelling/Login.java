@@ -184,15 +184,15 @@ public class Login extends javax.swing.JFrame {
                 String password = txtpassword.getText();
                 String utype = txtutype.getSelectedItem().toString();
                 
-            encap en =new encap();
-            en.setData(username, password, utype);
+                 encap en =new encap();
+                 en.setData(username, password, utype);
             
            
             result = en.getData();
             
             
             
-              // checke value
+              // checke password
                 
                 if(result == true){
                     
@@ -228,7 +228,7 @@ public class Login extends javax.swing.JFrame {
                         System.out.println("Loginning Sucess");
                        
                 }else{
-                    JOptionPane.showMessageDialog(null,"laogin fail and try again") ;
+                    JOptionPane.showMessageDialog(null,"login fail and try again") ;
                       System.out.println("Loginning fail");
                 }
                     
