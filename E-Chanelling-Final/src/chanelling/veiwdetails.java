@@ -217,7 +217,7 @@ public class veiwdetails extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        homePage hh = new homePage();
+       homePage1 hh = new homePage1();
          hh.setVisible(true); 
         this.hide();
         
