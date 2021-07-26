@@ -204,7 +204,7 @@ public class Doctor extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // connect home page
         
-        homePage home = new homePage();
+       homePage1 home = new homePage1();
         home.setVisible(true);
         this.hide();
     }//GEN-LAST:event_jButton4ActionPerformed
