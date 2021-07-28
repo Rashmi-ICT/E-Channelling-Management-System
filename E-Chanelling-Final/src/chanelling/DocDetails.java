@@ -165,7 +165,6 @@ public class DocDetails extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("DOCTOR DETAILS");
         jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, 306, 40));
         jPanel4.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 207, 37));
@@ -247,6 +246,7 @@ public class DocDetails extends javax.swing.JFrame {
         txtday.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sunday", "monday", "tuesday", "wendsday", "thuesday", "friday", "saterday" }));
         jPanel4.add(txtday, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 640, 209, 34));
 
+        jButton6.setBackground(new java.awt.Color(51, 153, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setText("ADD");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +256,7 @@ public class DocDetails extends javax.swing.JFrame {
         });
         jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 820, 104, 33));
 
+        jButton1.setBackground(new java.awt.Color(255, 153, 51));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("DELETE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -265,6 +266,7 @@ public class DocDetails extends javax.swing.JFrame {
         });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 820, 104, 33));
 
+        jButton3.setBackground(new java.awt.Color(255, 51, 102));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("UPDATE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -274,6 +276,7 @@ public class DocDetails extends javax.swing.JFrame {
         });
         jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 820, 104, 33));
 
+        jButton5.setBackground(new java.awt.Color(51, 153, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setText("BACK");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -283,6 +286,7 @@ public class DocDetails extends javax.swing.JFrame {
         });
         jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 390, 104, 33));
 
+        jButton4.setBackground(new java.awt.Color(0, 204, 204));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setText("REFRESH");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -345,8 +349,9 @@ public class DocDetails extends javax.swing.JFrame {
 
         jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 1040, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/DDDDDDDD.png"))); // NOI18N
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 460, 710, 450));
+        jLabel4.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/AdobeStock_306896548-scaled.jpeg"))); // NOI18N
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1880, 960));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -364,7 +369,7 @@ public class DocDetails extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 917, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addGap(0, 0, 0))
         );
 
         pack();
