@@ -31,12 +31,10 @@ public class homePage1 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         HOME = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -45,6 +43,12 @@ public class homePage1 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -77,6 +81,17 @@ public class homePage1 extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/Building_PS13_3017smJPEG-1024x681.jpg"))); // NOI18N
+        jLabel2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel2AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 500));
 
@@ -85,24 +100,13 @@ public class homePage1 extends javax.swing.JFrame {
         HOME.setBackground(new java.awt.Color(0, 0, 51));
         HOME.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 60)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel3.setBackground(new java.awt.Color(255, 204, 0));
+        jLabel3.setFont(new java.awt.Font("Cooper Black", 1, 65)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 255));
         jLabel3.setText("E - Channelling Management System");
-        HOME.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 1190, 120));
+        HOME.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 1420, 120));
 
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 60)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel4.setText("WELCOME ");
-        HOME.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 360, 100));
-
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 60)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
-        jLabel5.setText("WELCOME ");
-        HOME.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 370, 100));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/iiiiiiiiiii.png"))); // NOI18N
-        HOME.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 920, 620));
-
+        jButton2.setBackground(new java.awt.Color(0, 102, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton2.setText("PASSWORD GENARATER");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -110,8 +114,9 @@ public class homePage1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        HOME.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 410, 340, -1));
+        HOME.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 400, 340, 50));
 
+        jButton1.setBackground(new java.awt.Color(0, 102, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -119,8 +124,9 @@ public class homePage1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        HOME.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 490, 340, 40));
+        HOME.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 480, 340, 40));
 
+        jButton5.setBackground(new java.awt.Color(0, 102, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton5.setText("ABOUT US");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -128,8 +134,9 @@ public class homePage1 extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        HOME.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 570, 340, 40));
+        HOME.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 640, 340, 40));
 
+        jButton4.setBackground(new java.awt.Color(0, 102, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton4.setText("CONTACT US");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -137,33 +144,64 @@ public class homePage1 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        HOME.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 660, 340, 40));
+        HOME.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 560, 340, 40));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/password_48px.png"))); // NOI18N
-        HOME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 400, -1, -1));
+        HOME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 400, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/user_group_50px.png"))); // NOI18N
-        HOME.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 490, -1, -1));
+        HOME.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 480, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/telephone_48px.png"))); // NOI18N
-        HOME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 660, -1, -1));
+        HOME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 560, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/high_importance_40px.png"))); // NOI18N
-        HOME.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 570, 50, 60));
+        HOME.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 630, 50, 60));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/AdobeStock_306896548-scaled.jpeg"))); // NOI18N
+        jLabel10.setText("XXXXXXXXCC");
+        HOME.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 2220, 980));
+
+        jLabel4.setText("jLabel4");
+        HOME.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 460, 110));
+
+        jLabel5.setText("jLabel5");
+        HOME.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 360, 160));
+
+        jLabel11.setText("jLabel11");
+        HOME.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 290, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 130, Short.MAX_VALUE)
+        );
+
+        HOME.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 290, 130));
+
+        jLabel12.setBackground(new java.awt.Color(255, 204, 0));
+        jLabel12.setFont(new java.awt.Font("Cooper Black", 1, 65)); // NOI18N
+        jLabel12.setText("E - Channelling Management System");
+        HOME.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 1420, 120));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(1777, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(HOME, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(HOME, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(HOME, javax.swing.GroupLayout.PREFERRED_SIZE, 937, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -194,7 +232,7 @@ public class homePage1 extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
 
-        AboutUs cc = new AboutUs();
+        ABOUTUS cc = new ABOUTUS();
         cc.setVisible(true);
         this.hide();
 
@@ -207,6 +245,10 @@ public class homePage1 extends javax.swing.JFrame {
         cc.setVisible(true);
         this.hide();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jLabel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel2AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel2AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -252,6 +294,9 @@ public class homePage1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -262,5 +307,6 @@ public class homePage1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
