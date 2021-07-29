@@ -299,7 +299,7 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("ZOOM LINK");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, -1, 28));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, -1, 28));
         jPanel4.add(txtZOOM, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 700, 207, 36));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
