@@ -100,7 +100,7 @@ public final void pham(){
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("ITEM NAME");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 210, -1, -1));
 
@@ -109,27 +109,27 @@ public final void pham(){
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 30, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
         jLabel4.setText("DESCRIPTION");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 284, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
         jLabel5.setText("SEL PRICE");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 354, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 51));
         jLabel6.setText("ITEM");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 142, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 51));
         jLabel7.setText("BUY PRICE");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 416, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 51));
         jLabel8.setText("QUTY");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 484, -1, -1));
 
@@ -138,11 +138,11 @@ public final void pham(){
                 txtDeActionPerformed(evt);
             }
         });
-        jPanel2.add(txtDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 285, 186, 39));
+        jPanel2.add(txtDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, 186, 39));
         jPanel2.add(txtBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 425, 186, 39));
         jPanel2.add(txtIname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 211, 186, 39));
         jPanel2.add(txtitem, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 143, 186, 39));
-        jPanel2.add(txtSel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 358, 186, 39));
+        jPanel2.add(txtSel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, 186, 39));
 
         txtQu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
