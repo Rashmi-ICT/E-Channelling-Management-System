@@ -16,6 +16,7 @@ public class ABOUTUS extends javax.swing.JFrame {
      */
     public ABOUTUS() {
         initComponents();
+         setLocationRelativeTo(null);
     }
 
     /**
