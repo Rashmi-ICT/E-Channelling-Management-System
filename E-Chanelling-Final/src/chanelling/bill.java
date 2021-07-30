@@ -5,6 +5,9 @@
  */
 package chanelling;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,20 +50,24 @@ public class bill extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblname = new javax.swing.JLabel();
+        lbldoc = new javax.swing.JLabel();
+        lblbill = new javax.swing.JLabel();
+        lblsoccharg = new javax.swing.JLabel();
+        lblthost = new javax.swing.JLabel();
         lblDname = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblDch = new javax.swing.JLabel();
         lblBill = new javax.swing.JLabel();
         lblHch = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        txtdetails = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         cmbPatientId = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("PATIENT ID");
@@ -71,6 +78,7 @@ public class bill extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -83,124 +91,117 @@ public class bill extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(434, 434, 434)
+                .addGap(418, 418, 418)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(546, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 60));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("PATIENT BILL ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 229, 40));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("NAME");
+        lblname.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblname.setForeground(new java.awt.Color(255, 255, 255));
+        lblname.setText("NAME");
+        jPanel2.add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 146, 35));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("DOC NAME");
+        lbldoc.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbldoc.setForeground(new java.awt.Color(255, 255, 255));
+        lbldoc.setText("DOC NAME");
+        jPanel2.add(lbldoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 146, 35));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("BILL AMOUNT");
+        lblbill.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblbill.setForeground(new java.awt.Color(255, 255, 255));
+        lblbill.setText("BILL AMOUNT");
+        jPanel2.add(lblbill, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 237, 35));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("DOC CHARGES");
+        lblsoccharg.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblsoccharg.setForeground(new java.awt.Color(255, 255, 255));
+        lblsoccharg.setText("DOC CHARGES");
+        jPanel2.add(lblsoccharg, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 194, 35));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("HOSPITLE CHARGES");
+        lblthost.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblthost.setForeground(new java.awt.Color(255, 255, 255));
+        lblthost.setText("HOSPITLE CHARGES");
+        jPanel2.add(lblthost, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 261, 35));
 
         lblDname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblDname.setForeground(new java.awt.Color(255, 204, 0));
         lblDname.setText("QQ");
+        jPanel2.add(lblDname, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 146, 47));
 
         lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblName.setForeground(new java.awt.Color(255, 204, 51));
         lblName.setText("QQ");
+        jPanel2.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 146, 35));
 
         lblDch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblDch.setForeground(new java.awt.Color(255, 204, 0));
         lblDch.setText("AA");
+        jPanel2.add(lblDch, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 146, 35));
 
         lblBill.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblBill.setForeground(new java.awt.Color(255, 204, 0));
         lblBill.setText("AA");
+        jPanel2.add(lblBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 146, 35));
 
         lblHch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHch.setForeground(new java.awt.Color(255, 204, 0));
         lblHch.setText("AA");
+        jPanel2.add(lblHch, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 146, 35));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("BILL DETAILS");
+        txtdetails.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txtdetails.setForeground(new java.awt.Color(255, 255, 255));
+        txtdetails.setText("BILL DETAILS");
+        jPanel2.add(txtdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 298, 45));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHch, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDch, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblBill, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDname, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(123, 123, 123))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(268, 268, 268))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDname, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblBill, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 2145, 102, 36));
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("PRINT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 2144, 98, 37));
+
+        jButton3.setBackground(new java.awt.Color(51, 153, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("BACK");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 720, 450));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 51));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("PATIENT ID");
+        jLabel3.setText("CHANEL ID");
 
         cmbPatientId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,36 +230,10 @@ public class bill extends javax.swing.JFrame {
                 .addContainerGap(91, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(142, 142, 142)))
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/Untitled-design-17.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1360, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -290,9 +265,6 @@ public class bill extends javax.swing.JFrame {
                   String tot = Float.toString(Total);
                   lblBill.setText( tot);
 
-                
-                
-                
             }
             
             
@@ -307,22 +279,22 @@ public class bill extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_cmbPatientIdActionPerformed
-
+  
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         
 
         try{
-        Statement st = conn.createStatement();
+       Statement st = conn.createStatement();
 
          ResultSet r=st.executeQuery("select * from chanel ");
 
          while (r.next()) {  
 
              cmbPatientId.addItem(r.getString("id"));  
-         }
+      }
          
-        }
+       }
         catch(Exception e){
             
             JOptionPane.showMessageDialog(null,"Error in Attendance Grid View..... "+e);
@@ -330,6 +302,36 @@ public class bill extends javax.swing.JFrame {
         
  
     }//GEN-LAST:event_formWindowOpened
+  
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        PatienLogin pl = new   PatienLogin();
+        pl.setVisible(true);
+        this.hide();
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+                    PrintWriter out = new PrintWriter(new FileWriter("TestFile.txt"));
+                    out.print(lblname.getText());
+                    out.print(lbldoc.getText());
+                    
+                    out.flush();
+                    out.close();
+
+                } catch (IOException e1) {
+                    System.err.println("Error occurred");
+                }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        homePage1 nn = new homePage1();
+        nn.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,16 +371,14 @@ public class bill extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmbPatientId;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -387,5 +387,11 @@ public class bill extends javax.swing.JFrame {
     private javax.swing.JLabel lblDname;
     private javax.swing.JLabel lblHch;
     private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblbill;
+    private javax.swing.JLabel lbldoc;
+    private javax.swing.JLabel lblname;
+    private javax.swing.JLabel lblsoccharg;
+    private javax.swing.JLabel lblthost;
+    private javax.swing.JLabel txtdetails;
     // End of variables declaration//GEN-END:variables
 }
