@@ -120,7 +120,7 @@ public final void pham(){
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 51));
-        jLabel6.setText("ITEM");
+        jLabel6.setText("ITEM ID");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 142, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

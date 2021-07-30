@@ -46,7 +46,7 @@ public class PatientChanel extends javax.swing.JFrame {
             while(rs.next()){
                 
                 Object o[] = {rs.getString("pname"),rs.getString("Dname"),rs.getString("doccharge"),
-                    rs.getString("zoomlink"),rs.getString("room"),rs.getString("date")};
+                    rs.getString("zoom"),rs.getString("room"),rs.getString("date")};
                 tm.addRow(o);
                 
                 

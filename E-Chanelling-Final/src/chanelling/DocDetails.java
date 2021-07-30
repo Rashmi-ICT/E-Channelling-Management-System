@@ -48,7 +48,7 @@ public class DocDetails extends javax.swing.JFrame {
             while(rs.next()){
                 
                 Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("address"),rs.getString("tp"),
-                    rs.getString("email"),rs.getString("room"),rs.getString("specialist"),rs.getString("charges"),rs.getString("gender"),rs.getString("day"),rs.getString("zoomLink")};
+                    rs.getString("email"),rs.getString("room"),rs.getString("specialist"),rs.getString("charge"),rs.getString("gender"),rs.getString("date"),rs.getString("zoom")};
                 tm.addRow(o);
                 
                 
