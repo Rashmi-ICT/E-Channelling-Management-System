@@ -49,7 +49,7 @@ public class viewdocfull extends javax.swing.JFrame {
             while(rs.next()){
                 
                 Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("address"),rs.getString("tp"),
-                    rs.getString("email"),rs.getString("room"),rs.getString("specialist"),rs.getString("charges"),rs.getString("gender"),rs.getString("day")};
+                    rs.getString("email"),rs.getString("room"),rs.getString("specialist"),rs.getString("charge"),rs.getString("gender"),rs.getString("date"), rs.getString("zoom")};
                 tm.addRow(o);
                 
                 
@@ -140,13 +140,13 @@ public class viewdocfull extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "DOC ID", "NAME", "ADDRESS", "TP", "EMAIL", "ROOM", "SPECIALOST", "CHARGES", "GENDER", "DATE"
+                "DOC ID", "NAME", "ADDRESS", "TP", "EMAIL", "ROOM", "SPECIALOST", "CHARGES", "GENDER", "DATE", "zoom link"
             }
         ));
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {

@@ -39,14 +39,14 @@ public class Viewdoc extends javax.swing.JFrame {
         try{
             
        
-            PreparedStatement ps = conn.prepareStatement(" Select  id , name ,charges,day , room, specialist   from doctor");
+            PreparedStatement ps = conn.prepareStatement(" Select  id , name ,charge,date , room, specialist  from doctor");
             ResultSet rs=ps.executeQuery();
             DefaultTableModel tm = (DefaultTableModel)jTable1.getModel();
             tm.setRowCount(0);
             
             while(rs.next()){
                 
-                Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("charges"),rs.getString("day"),
+                Object o[] = {rs.getInt("id"),rs.getString("name"),rs.getString("charge"),rs.getString("date"),
                     rs.getString("room"),rs.getString("specialist")};
                 tm.addRow(o);
                 
