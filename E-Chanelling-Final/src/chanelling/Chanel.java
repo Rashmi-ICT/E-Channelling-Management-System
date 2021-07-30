@@ -385,8 +385,8 @@ public class Chanel extends javax.swing.JFrame {
             
              txtDname.setText(r.getString("name"));
              txtRoom.setText(r.getString("room"));
-             txtCh.setText(r.getString("charges"));
-             txtZOOM.setText(r.getString("zoomLink"));
+             txtCh.setText(r.getString("charge"));
+             txtZOOM.setText(r.getString("zoom"));
              
          }
          
