@@ -304,7 +304,7 @@ public class Medi extends javax.swing.JFrame {
         lblName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblName1.setForeground(new java.awt.Color(0, 0, 153));
         lblName1.setText("22");
-        jPanel4.add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 170, 169, 32));
+        jPanel4.add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 160, 169, 32));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 51, 51));

@@ -299,7 +299,7 @@ public class Patientdetails extends javax.swing.JFrame {
     }//GEN-LAST:event_txtemail1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        PatienLogin nn =new PatienLogin();
+        homePage1 nn =new homePage1();
         nn.setVisible(true);
         this.hide();
         

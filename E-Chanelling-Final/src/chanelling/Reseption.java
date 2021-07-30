@@ -90,7 +90,7 @@ public class Reseption extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 281, 39));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 281, 39));
 
         jButton4.setBackground(new java.awt.Color(0, 102, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -120,7 +120,7 @@ public class Reseption extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 281, 39));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 281, 39));
 
         jButton6.setBackground(new java.awt.Color(255, 51, 102));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -140,7 +140,7 @@ public class Reseption extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 281, 39));
+        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 281, 39));
 
         jButton10.setBackground(new java.awt.Color(51, 102, 255));
         jButton10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -150,7 +150,7 @@ public class Reseption extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 281, 39));
+        jPanel2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 490, 281, 39));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chanelling/2013AG42.460RE.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");

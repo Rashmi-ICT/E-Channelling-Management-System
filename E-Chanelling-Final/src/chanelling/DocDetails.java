@@ -177,19 +177,19 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("DOC NAME");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 111, 30));
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 111, 30));
         jPanel4.add(txtname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 207, 37));
         jPanel4.add(txtaddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, 207, 36));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ADDRESS");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, 28));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, 28));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("TP");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 86, 28));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 86, 28));
 
         txttp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +201,7 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("E-MAIL");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 86, 28));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 86, 28));
 
         txtmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +213,7 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ROOM");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 86, 28));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 86, 28));
 
         txtroom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jPanel4.add(txtroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 207, 32));
@@ -221,19 +221,19 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("SPECIALIST");
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 520, -1, 28));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, -1, 28));
         jPanel4.add(txtsp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 207, 36));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("CHARGERS");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, 28));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 460, -1, 28));
         jPanel4.add(txtch, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 207, 37));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("GENDER");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 580, 106, 28));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 570, 106, 28));
 
         txtgend.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "male ", "female" }));
         jPanel4.add(txtgend, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 207, 38));
@@ -241,7 +241,7 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("DAY");
-        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 640, -1, 28));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, -1, 28));
 
         txtday.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sunday", "monday", "tuesday", "wendsday", "thuesday", "friday", "saterday" }));
         jPanel4.add(txtday, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 640, 209, 34));
@@ -284,7 +284,7 @@ public class DocDetails extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 390, 104, 33));
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 400, 104, 33));
 
         jButton4.setBackground(new java.awt.Color(0, 204, 204));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -299,7 +299,7 @@ public class DocDetails extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("ZOOM LINK");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, -1, 28));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, -1, 28));
         jPanel4.add(txtZOOM, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 700, 207, 36));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -546,7 +546,7 @@ public class DocDetails extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        Doctor  dd = new  Doctor();
+       homePage1  dd = new  homePage1();
         dd.setVisible(true); 
         this.hide();
     }//GEN-LAST:event_jButton5ActionPerformed

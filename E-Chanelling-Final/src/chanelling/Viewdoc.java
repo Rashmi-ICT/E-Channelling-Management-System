@@ -119,7 +119,7 @@ public class Viewdoc extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("VIWE DOCTOR DETAILS");
+        jLabel2.setText("VIWE CHANNELLING DETAILS");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
