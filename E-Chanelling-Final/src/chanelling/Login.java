@@ -171,14 +171,26 @@ public class Login extends javax.swing.JFrame {
                 String username = txtusername .getText();
                 String password = txtpassword.getText();
                 String utype = txtutype.getSelectedItem().toString();
+          
                 
+          if (username == "" ||  password =="" ){
+              
+          JOptionPane.showMessageDialog(null,"please enter your password and username") ;
+              
+        } else{
+          
+          
+          
+          
+          
+          
                  encap en =new encap();
                  en.setData(username, password, utype);
             
            
             result = en.getData();
             
-            
+           
             
               // checke password
                 
@@ -223,12 +235,12 @@ public class Login extends javax.swing.JFrame {
                   
            
   
-            
+          } 
             
         } catch (Exception ex) {
            System.out.println(ex);
         }
-        
+           
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
