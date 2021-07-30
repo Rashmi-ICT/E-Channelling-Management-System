@@ -192,7 +192,13 @@ public class MediBill extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbNameActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+         int qty = Integer.parseInt(txtQTY.getText());
+        double price = Double.parseDouble(lblPrice.getText());
+        double tot = price * qty;
+        lblAmount.setText(tot+"");
+        
+        
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
